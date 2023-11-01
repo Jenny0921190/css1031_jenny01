@@ -11,3 +11,40 @@ html {
     -moz-box-sizing: inherit;
     box-sizing: inherit;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .main{
+    width: 980px;
+    margin: 0 auto;
+    /* background-color: brown; */
+  }
+.main>header{
+    text-align: center;
+}
+.main>header>img.logo{
+    width: 150px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.main>nav{
+    border-top:1px solid #898002;
+    border-bottom:1px solid #898002;
+    margin-bottom: 20px;
+
+    /* background-color: aqua; */
+}
+.main>nav>ul>li{
+    /* background-color: #898002; */
+    display:inline-block;
+    width: 32%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 28px;
+    font-weight: bolder;
+}
+.nav_en{
+    color: #898002;
+}
