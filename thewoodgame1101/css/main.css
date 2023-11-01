@@ -41,6 +41,7 @@ ul {
     display:inline-block;
     width: 32%;
     text-align: center;
+    height: 70px;
     line-height: 70px;
     font-size: 28px;
     font-weight: bolder;
