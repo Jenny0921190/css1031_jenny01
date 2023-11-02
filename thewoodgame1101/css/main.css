@@ -11,67 +11,119 @@ html {
     -moz-box-sizing: inherit;
     box-sizing: inherit;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-  .main{
-    width: 980px;
+}
+
+.main {
+    width: 100%;
+    max-width: 950px;
+    padding: 15px 20px;
     margin: 0 auto;
     /* background-color: brown; */
-  }
+}
 
-.main>header{
+.main>header {
     /* text-align: center; */
 }
-.main>header>img.logo{
+
+.main>header>img.logo {
     width: 150px;
     margin-top: 40px;
     margin-bottom: 20px;
     display: block;
     margin: 0 auto;
-    
+
 }
-.main>nav{
-    border-top:1px solid #898002;
-    border-bottom:1px solid #898002;
+
+.main>nav {
+    border-top: 1px solid #898002;
+    border-bottom: 1px solid #898002;
     margin-bottom: 20px;
 
     /* background-color: aqua; */
 }
-.main>nav>ul>li{
+
+.main>nav>ul {
+    display: flex;
+}
+
+.main>nav>ul>li {
     /* background-color: #898002; */
-    display:inline-block;
-    width: 32%;
+
+    /* 這是display inset-inline-block的排版方式 */
+    /* display: inline-block;
+    width: 33.3333333%;
+    margin-right: -4px; */
+
+    flex: 1;
+
     text-align: center;
     height: 70px;
     line-height: 70px;
     font-size: 28px;
     font-weight: bolder;
-    
+
 }
 
-.main>nav>ul>li>a.nav_item{
+.main>nav>ul>li>.nav_item {
     color: #000;
     text-decoration: none;
-
-    }
-
-.main>nav>ul>li>a.nav_item:hover{
-background-color: #dcdddd;
-text-decoration: none;
-color: #000;
-display: block;
+    position: relative;
 }
 
-.nav_en{
+.main>nav>ul>li>.nav_item:hover {
+    background-color: #dcdddd;
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+.main>nav>ul>li>.nav_item>.nav_child {
+    /* background-color: aqua; */
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.main>nav>ul>li>.nav_item:hover>.nav_child {
+    display: block;
+    background-color: #898002;
+    color: rgb(248, 248, 248);
+    text-decoration: none;
+}
+
+.main>nav>ul>li>.nav_item:hover>.nav_child a {
+    line-height: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #898002;
+    display: block;
+    font-size: 16px;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.main>nav>ul>li>.nav_item:hover>.nav_child>a:hover {
+    background-color: #000;
+}
+
+.nav_en {
     color: #898002;
 }
 
-.main>div.content>img{
+.main>div.content>img {
     display: block;
     margin: 0 auto;
     width: 100%;
 }
 
+@media(max-width:992px) {
+    .main>nav>ul>li {
+        width: 100%;
+    }
+}
+/* 製作手機版面 */
