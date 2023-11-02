@@ -59,6 +59,7 @@ ul {
     width: 33.3333333%;
     margin-right: -4px; */
 
+    /* 這是flex: 1;的排版方式 */
     flex: 1;
 
     text-align: center;
@@ -122,8 +123,15 @@ ul {
 }
 
 @media(max-width:992px) {
+    /* flex方向:垂直 */
+    .main>nav>ul{
+        flex-direction: column;
+    }
     .main>nav>ul>li {
         width: 100%;
+    }
+    .main>nav>ul>li>.nav_item:hover>.nav_child {
+        display: none
     }
 }
 /* 製作手機版面 */
