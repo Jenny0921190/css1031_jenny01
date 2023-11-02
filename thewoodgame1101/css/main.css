@@ -21,13 +21,17 @@ ul {
     margin: 0 auto;
     /* background-color: brown; */
   }
+
 .main>header{
-    text-align: center;
+    /* text-align: center; */
 }
 .main>header>img.logo{
     width: 150px;
     margin-top: 40px;
     margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+    
 }
 .main>nav{
     border-top:1px solid #898002;
@@ -45,7 +49,29 @@ ul {
     line-height: 70px;
     font-size: 28px;
     font-weight: bolder;
+    
 }
+
+.main>nav>ul>li>a.nav_item{
+    color: #000;
+    text-decoration: none;
+
+    }
+
+.main>nav>ul>li>a.nav_item:hover{
+background-color: #dcdddd;
+text-decoration: none;
+color: #000;
+display: block;
+}
+
 .nav_en{
     color: #898002;
 }
+
+.main>div.content>img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
