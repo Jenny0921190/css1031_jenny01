@@ -117,21 +117,87 @@ ul {
 }
 
 .main>div.content>img {
-    display: block;
-    margin: 0 auto;
     width: 100%;
 }
 
+/* shop.html開始 */
+
+.main .p_content {
+    color: #585951;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    /* background-color: #585951; */
+}
+
+.shop_content>.item_wrap {
+    border-top: 1px solid #898002;
+    font-weight: bold;
+}
+
+.shop_content>.item_wrap>.item_row {
+    display: flex
+    padding: 15px;
+
+}
+
+.shop_content>.item_wrap>.item_row>div{
+    flex: 1
+
+}
+
+
+.shop_content>.item_wrap>.item_row>.item_right .item_title{
+    font-weight:bold ;
+    border-bottom: 1px solid #898002;
+    padding-bottom: 3px;
+
+}
+
+.price_txt{
+    color: #898002;
+    font-size: 17px;
+
+}
+
+.game_tex{
+line-height: normal;
+
+}
+
+.buy_btn{
+    margin: 30px;
+    text-decoration: none;
+    background-color: #898002;
+    color: #fff;
+    padding: 7px;
+    padding-top: 12px;
+    display: block;
+    border-radius: 14px;
+}
+
+.buy_btn :hover{
+
+}
+
+
 @media(max-width:992px) {
+
     /* flex方向:垂直 */
-    .main>nav>ul{
+    .main>nav>ul {
         flex-direction: column;
     }
+
     .main>nav>ul>li {
         width: 100%;
     }
+
     .main>nav>ul>li>.nav_item:hover>.nav_child {
         display: none
+
     }
 }
+
 /* 製作手機版面 */
