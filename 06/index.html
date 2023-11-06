@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(https://citycreator.com/bgs/1/bg3.gif);
+            background-repeat: repeat-x;
+        }
+        .center-point{
+            width: 20px;
+            height: 20px;
+            background-color: rgb(0, 0, 0);
+            /* 畫圓角 */
+            border-radius: 50%;
+            top: 200px;
+            left: 50%;
+            /* 通常最上層會用relative做定位，但用absolute也沒差
+            因為object是包含在<div class=enter-point></div>裡面 */
+            position: relative;
+            /* position: absolute; */
+        }
+        .object1{
+            background: url(https://citycreator.com/blocks/1/build_5.gif);
+            width: 100px;
+            height: 100px;
+            background-repeat: no-repeat;
+            /* 圖釘＿圓心 */
+            position: absolute;
+            /* 不能同時設定 x軸top、bottom；y軸left、right */
+            top: 50px;
+            left: -100px;
+        }
+        .object2{
+            background: url(https://citycreator.com/blocks/1/build_5.gif);
+            width: 100px;
+            height: 100px;
+            background-repeat: no-repeat;
+            /* 圖釘＿圓心 */
+            position: absolute;
+            /* 不能同時設定 x軸top、bottom；y軸left、right */
+            top: 132px;
+            left: 34px;
+            /* 圖層數字 數字越大圖層越後面 */
+            z-index: 5;
+        }
+
+        .object3{
+            background: url(https://citycreator.com/blocks/1/build_5.gif);
+            width: 100px;
+            height: 100px;
+            background-repeat: no-repeat;
+            /* 圖釘＿圓心_若沒有（0,0)會從body就是網頁的左上角開始*/
+            position: absolute;
+            /* 不能同時設定_x軸top_bottom；y軸left_right */
+            top: 163px;
+            left: 3px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <!-- 所有的元素都要包在center-point裏面 -->
+    <div class="center-point">
+        <div class="object1"></div>
+        <div class="object2"></div>
+        <div class="object3">
+            <!-- 把 css style放在html裡 -->
+            <div style="width: 20px;
+            height: 20px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+            top: 28px;
+            left: 28px;
+            position: absolute;">
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

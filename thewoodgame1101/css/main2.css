@@ -122,14 +122,14 @@ ul {
 
 /* shop.html開始 */
 
-.main .p_content {
+.main .shop_content .p_content {
     color: #585951;
     line-height: 20px;
     letter-spacing: 1.5px;
     font-size: 15px;
     font-weight: bold;
     display: block;
-    /* background-color: #585951; */
+    background-color: #585951;
 }
 
 .shop_content>.item_wrap {
